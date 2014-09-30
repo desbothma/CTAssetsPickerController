@@ -68,6 +68,15 @@
 @property (nonatomic, strong) NSMutableArray *selectedAssets;
 
 /**
+ *  Determines whether the done button should be disabled when no items have been selected.
+ *
+ *  The done button is disabled by default if no items have been selected. When setting this property to 
+ *  NO, the done button will still be clickable when no items are selected. This allows the for the deselecting
+ *  of all currently selected items, then tapping done.
+ */
+@property (nonatomic, assign) BOOL disableDoneButton;
+
+/**
  *  Determines whether or not the cancel button is visible in the picker.
  *
  *  The cancel button is visible by default. To hide the cancel button, (e.g. presenting the picker in `UIPopoverController`)
